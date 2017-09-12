@@ -10,20 +10,31 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
     
-    var toDos: [ToDo] = []
+    var toDos: [ToDoItems] = []
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        toDos = ToDo().createToDo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getToDos()
+    }
+
+    func getToDos() {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            if let coreDataToDos = try? context.fetch(ToDoItems.fetchRequest()) as? [ToDoItems] {
+                if let tDos = coreDataToDos {
+                    toDos = tDos
+                    tableView.reloadData()
+                }
+                
+            }
+        }
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -42,12 +53,15 @@ class ToDoTableViewController: UITableViewController {
 
         let toDo = toDos[indexPath.row]
         
-        if toDo.isImportant {
-            cell.textLabel?.text = "❗ \(toDo.name)"
+        if let name = toDo.name {
             
-        } else {
-            cell.textLabel?.text = "\(toDo.name)"
-           
+            if toDo.isImportant {
+                cell.textLabel?.text = "\(name)❗️"
+                
+            } else {
+                cell.textLabel?.text = "\(name)"
+                
+            }
         }
 
         return cell
@@ -67,7 +81,7 @@ class ToDoTableViewController: UITableViewController {
             addVC.preVC = self
         }
         if let doneVC = segue.destination as? EditViewController {
-            if let toDo = sender as? ToDo {
+            if let toDo = sender as? ToDoItems {
                 doneVC.selectToDo = toDo
                 doneVC.preVC = self
             }

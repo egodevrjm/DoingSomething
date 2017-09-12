@@ -28,15 +28,34 @@ class AddViewController: UIViewController {
     
     @IBAction func saveBtn(sender: UIBarButtonItem) {
         
-        let toDo = ToDo()
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        
+            let toDo = ToDoItems(entity: ToDoItems.entity(), insertInto: context)
+            
+            if let titleText = textField.text {
+                toDo.name = titleText
+                toDo.details = textView.text
+                toDo.isImportant = importantSwitch.isOn
+                
+            }
+            try? context.save()
+            preVC.tableView.reloadData()
+            navigationController?.popViewController(animated: true)
+        }
+        
+        
+        
+     /*   let toDo = ToDo()
         toDo.name = textField.text!
         toDo.isImportant = importantSwitch.isOn
         toDo.details = textView.text
         preVC.toDos.append(toDo)
         preVC.tableView.reloadData()
         navigationController?.popViewController(animated: true)
+ 
+     */
     }
-
+ 
 }
 
 extension UIViewController {

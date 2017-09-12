@@ -11,7 +11,7 @@ import UIKit
 class EditViewController: UIViewController {
     
     var preVC = ToDoTableViewController()
-    var selectToDo = ToDo()
+    var selectToDo: ToDoItems?
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var impLabel: UILabel!
@@ -20,10 +20,10 @@ class EditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = selectToDo.name
-        descriptionLabel.text = selectToDo.details
+        titleLabel.text = selectToDo?.name
+        descriptionLabel.text = selectToDo?.details
         
-        if selectToDo.isImportant {
+        if (selectToDo?.isImportant)! {
             impLabel.isHidden = false
         } else {
             impLabel.isHidden = true
@@ -34,17 +34,14 @@ class EditViewController: UIViewController {
 
    
     @IBAction func doneBtn(_ sender: UIBarButtonItem) {
-        var index = 0
-        for toDo in preVC.toDos {
-            if toDo.name == selectToDo.name {
-                preVC.toDos.remove(at: index)
-                preVC.tableView.reloadData()
-                navigationController?.popViewController(animated: true)
-                break
-            }
-            index += 1
-        }
         
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+         
+            if let theToDo = selectToDo {
+                context.delete(theToDo)
+                navigationController?.popViewController(animated: true)
+            }
+        }
         
     }
     

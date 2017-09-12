@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		709898711F674008004FB6BE /* RoundedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709898701F674008004FB6BE /* RoundedTextView.swift */; };
+		709898731F67407D004FB6BE /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709898721F67407D004FB6BE /* AddViewController.swift */; };
+		709898771F67492F004FB6BE /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709898761F67492F004FB6BE /* EditViewController.swift */; };
+		709898BB1F67BDDB004FB6BE /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709898BA1F67BDDB004FB6BE /* UIColor+extension.swift */; };
 		70F44AF91F67293500B8FCEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44AF81F67293500B8FCEC /* AppDelegate.swift */; };
-		70F44AFB1F67293500B8FCEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44AFA1F67293500B8FCEC /* ViewController.swift */; };
 		70F44AFE1F67293500B8FCEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F44AFC1F67293500B8FCEC /* Main.storyboard */; };
 		70F44B011F67293500B8FCEC /* DoingSomething.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70F44AFF1F67293500B8FCEC /* DoingSomething.xcdatamodeld */; };
 		70F44B031F67293500B8FCEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F44B021F67293500B8FCEC /* Assets.xcassets */; };
 		70F44B061F67293500B8FCEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F44B041F67293500B8FCEC /* LaunchScreen.storyboard */; };
 		70F44B111F67293500B8FCEC /* DoingSomethingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44B101F67293500B8FCEC /* DoingSomethingTests.swift */; };
 		70F44B1C1F67293500B8FCEC /* DoingSomethingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44B1B1F67293500B8FCEC /* DoingSomethingUITests.swift */; };
+		70F44B2A1F67331C00B8FCEC /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44B291F67331C00B8FCEC /* ToDoTableViewController.swift */; };
+		70F44B311F6733D500B8FCEC /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44B301F6733D500B8FCEC /* ToDo.swift */; };
+		70F44B341F67376C00B8FCEC /* BigTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F44B331F67376C00B8FCEC /* BigTextCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		709898701F674008004FB6BE /* RoundedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextView.swift; sourceTree = "<group>"; };
+		709898721F67407D004FB6BE /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		709898761F67492F004FB6BE /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		709898BA1F67BDDB004FB6BE /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		70F44AF51F67293500B8FCEC /* DoingSomething.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoingSomething.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F44AF81F67293500B8FCEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		70F44AFA1F67293500B8FCEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		70F44AFD1F67293500B8FCEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70F44B001F67293500B8FCEC /* DoingSomething.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DoingSomething.xcdatamodel; sourceTree = "<group>"; };
 		70F44B021F67293500B8FCEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		70F44B171F67293500B8FCEC /* DoingSomethingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoingSomethingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F44B1B1F67293500B8FCEC /* DoingSomethingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoingSomethingUITests.swift; sourceTree = "<group>"; };
 		70F44B1D1F67293500B8FCEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70F44B291F67331C00B8FCEC /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		70F44B301F6733D500B8FCEC /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		70F44B331F67376C00B8FCEC /* BigTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigTextCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +111,10 @@
 		70F44AF71F67293500B8FCEC /* DoingSomething */ = {
 			isa = PBXGroup;
 			children = (
+				70F44B2D1F6733B700B8FCEC /* Custom UI */,
+				70F44B2C1F6733B000B8FCEC /* Model */,
 				70F44AF81F67293500B8FCEC /* AppDelegate.swift */,
-				70F44AFA1F67293500B8FCEC /* ViewController.swift */,
+				70F44B2B1F67339F00B8FCEC /* VC */,
 				70F44AFC1F67293500B8FCEC /* Main.storyboard */,
 				70F44B021F67293500B8FCEC /* Assets.xcassets */,
 				70F44B041F67293500B8FCEC /* LaunchScreen.storyboard */,
@@ -126,6 +140,34 @@
 				70F44B1D1F67293500B8FCEC /* Info.plist */,
 			);
 			path = DoingSomethingUITests;
+			sourceTree = "<group>";
+		};
+		70F44B2B1F67339F00B8FCEC /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				70F44B291F67331C00B8FCEC /* ToDoTableViewController.swift */,
+				709898721F67407D004FB6BE /* AddViewController.swift */,
+				709898761F67492F004FB6BE /* EditViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		70F44B2C1F6733B000B8FCEC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70F44B301F6733D500B8FCEC /* ToDo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70F44B2D1F6733B700B8FCEC /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				70F44B331F67376C00B8FCEC /* BigTextCell.swift */,
+				709898701F674008004FB6BE /* RoundedTextView.swift */,
+				709898BA1F67BDDB004FB6BE /* UIColor+extension.swift */,
+			);
+			name = "Custom UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F44AFB1F67293500B8FCEC /* ViewController.swift in Sources */,
 				70F44B011F67293500B8FCEC /* DoingSomething.xcdatamodeld in Sources */,
+				709898711F674008004FB6BE /* RoundedTextView.swift in Sources */,
+				709898731F67407D004FB6BE /* AddViewController.swift in Sources */,
+				70F44B2A1F67331C00B8FCEC /* ToDoTableViewController.swift in Sources */,
 				70F44AF91F67293500B8FCEC /* AppDelegate.swift in Sources */,
+				70F44B341F67376C00B8FCEC /* BigTextCell.swift in Sources */,
+				709898BB1F67BDDB004FB6BE /* UIColor+extension.swift in Sources */,
+				70F44B311F6733D500B8FCEC /* ToDo.swift in Sources */,
+				709898771F67492F004FB6BE /* EditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
